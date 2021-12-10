@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Corinthia&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="form.css"/>
+        <script src="form.js"></script>
+
+</head>
+<body>
+    <h2 id="h2"> Admission Form </h2>
+    <p id="p"> </p>
+    <div>
+    
+    <form class="form_conatainer">
+        <h4> personal information</h4>
+        
+            <input type="text"  id="firstName" class= "inline" name="f_name" placeholder="First Name" required/>
+        
+        <input type="text" id="lastName" class="inline" name="l_name" placeholder="Last Name" required />
+        <br>
+
+        <input type="email"  id="email" class="inline" sname="mail" placeholder="Email ID" required />
+        <input type="text"  id="phonenumber" class="inline" name="phone" placeholder="Phone Number" required patter="[0-9]{4}-[0-9]{3}-[0-9]{3}"/>
+        <br>
+
+        <select class="inline" id="gender" name="gender" title="something" required>
+            <option>  Select  Gender</option>
+            <option> Male</option>
+            <option> Female</option>
+            <option>Other</option>
+            <optgroup label="other Something">
+                <option> other</option>
+                <option> other</option>
+                <option> other</option>
+
+            </optgroup>
+        </select>
+        <input  id="date" class="inline" type="date" name="date_of_birth" max="2022-01-01" required />
+        <br>
+        
+        
+        <label> <b>Address</b></label>
+        <textarea   id="address" name="address">
+        
+            
+        </textarea>
+        <h4> Education information</h4>
+        <select  id="degree" class="inline" required>
+            <optgroup label="Bachelor's">
+                <option>B.tech</option>
+
+
+            </optgroup>
+            <optgroup label="master's">
+                <option> M.tech </option>
+            </optgroup>
+        </select>
+        <input  id="collegeName" class="inline" type="text" name="college" placeholder="enter your college name" required/>
+        <br>
+        <input  id="yoc" type="number" class="inline" name="Graduation_year" placeholder="Year of Graduation" required />
+        
+        <input  id="percentage" class= "inline" type="number" name="percentage" placeholder="Percentage/CGPA"  step="0.1" min="0" max="100" required/>
+        <input   id="file_f" type="file" name="file_format" required/>
+        <h4> Course Detail</h4>
+        <div id="radio">
+          Fundametal<input  value="Fundametal" id="radiobtn" type="radio" class="inline" name="course"/>
+          Advance<input  value="Advance"  id="radiobtn1" type="radio" class="inline" name="course"/>
+        </div>
+<br>
+  DSA<input   value="DSA" id="checkbtn" class="inline" type="checkbox" name="course"/>
+   Web<input    value="web" id="checkbtn1" class="inline" type="checkbox" name="course"/>
+   <br>
+
+   <input  onclick="btnclick()" class="inline" type="submit" value="Apply"/>
+        <input onclick="resetbtnclick()" class="inline" type="reset"/>
+    
+    </form>
+</div>
+
+    
+    
+</body>
+</html>
